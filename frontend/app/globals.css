@@ -1,0 +1,36 @@
+/* frontend/app/globals.css - CÓDIGO CORREGIDO */
+
+@import "tailwindcss";
+
+/* --- MODO CLARO (POR DEFECTO) --- */
+:root {
+  /* Fondo gris claro, como el que queríamos para las páginas de admin */
+  --background: #f3f4f6; /* Equivalente a bg-gray-100 */
+  /* Texto gris muy oscuro, casi negro, para máxima legibilidad */
+  --foreground: #111827; /* Equivalente a text-gray-900 */
+}
+
+/* --- MODO OSCURO --- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Fondo oscuro, no negro puro para no cansar la vista */
+    --background: #111827; /* Equivalente a bg-gray-900 */
+    /* Texto gris muy claro para un buen contraste en fondo oscuro */
+    --foreground: #f9fafb; /* Equivalente a text-gray-50 */
+  }
+}
+
+/* -- OTRAS VARIABLES (las dejamos como están) -- */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* --- ESTILOS DEL BODY --- */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
