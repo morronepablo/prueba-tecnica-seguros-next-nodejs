@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={inter.className}>
-        <Toaster position="top-right" /> {/* Componente para notificaciones */}
+        <Toaster position="top-right" />
         {children}
       </body>
     </html>

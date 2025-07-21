@@ -110,8 +110,6 @@ const updateProduct = async (req, res) => {
 
       // Si se sube una nueva imagen, la actualizamos
       if (req.file) {
-        // Opcional: borrar la imagen antigua de Cloudinary
-        // await cloudinary.uploader.destroy(product.image.public_id);
         product.image = {
           public_id: req.file.filename,
           url: req.file.path,
@@ -137,12 +135,6 @@ const deleteProduct = async (req, res) => {
     const product = await Product.findById(req.params.id);
 
     if (product) {
-      // Opcional: Lógica para borrar la imagen de Cloudinary
-      // const public_id = product.image.public_id;
-      // if (public_id) {
-      //   await cloudinary.uploader.destroy(public_id);
-      // }
-
       await product.deleteOne();
       res.json({ message: "Producto borrado exitosamente" });
     } else {

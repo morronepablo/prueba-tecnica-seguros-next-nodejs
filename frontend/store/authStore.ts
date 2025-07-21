@@ -20,8 +20,6 @@ interface AuthState {
 
 // Creamos el store
 export const useAuthStore = create<AuthState>()(
-  // `persist` es un middleware que guarda automáticamente el estado en el localStorage del navegador.
-  // Así, si el usuario recarga la página, su sesión no se pierde.
   persist(
     (set) => ({
       user: null, // Estado inicial: no hay usuario

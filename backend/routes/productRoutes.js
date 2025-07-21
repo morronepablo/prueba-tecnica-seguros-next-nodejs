@@ -1,9 +1,8 @@
-// backend/routes/productRoutes.js - VERSIÓN FINAL CONFIRMADA
+// backend/routes/productRoutes.js
 
 const express = require("express");
 const router = express.Router();
 
-// 1. IMPORTAMOS LOS CONTROLADORES DE PRODUCTOS
 const {
   getProducts,
   getProductById,
@@ -12,10 +11,8 @@ const {
   deleteProduct,
 } = require("../controllers/productController");
 
-// 2. IMPORTAMOS LOS MIDDLEWARES DE AUTENTICACIÓN Y AUTORIZACIÓN
 const { protect, admin } = require("../middleware/authMiddleware");
 
-// 3. IMPORTAMOS EL MIDDLEWARE DE SUBIDA DE ARCHIVOS (MULTER + CLOUDINARY)
 const upload = require("../config/cloudinary");
 
 // --- DEFINICIÓN DE RUTAS ---

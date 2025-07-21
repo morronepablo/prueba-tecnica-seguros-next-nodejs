@@ -1,14 +1,3 @@
-// // frontend/app/(main)/page.tsx
-// export default function HomePage() {
-//   return (
-//     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-//       <h1 className="text-4xl font-bold text-gray-800">
-//         Bienvenido a Nuestra Tienda
-//       </h1>
-//     </main>
-//   );
-// }
-
 // frontend/app/(main)/page.tsx
 "use client";
 

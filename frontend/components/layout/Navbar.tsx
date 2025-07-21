@@ -1,64 +1,3 @@
-// // frontend/components/layout/Navbar.tsx
-// "use client";
-
-// import Link from "next/link";
-// import { useAuthStore } from "@/store/authStore"; // Importamos nuestro store
-
-// export default function Navbar() {
-//   // Usamos el store para obtener el estado actual
-//   const { user, logout } = useAuthStore();
-
-//   return (
-//     <nav className="bg-gray-800 text-white shadow-lg">
-//       <div className="container mx-auto px-6 py-3">
-//         <div className="flex items-center justify-between">
-//           {/* Logo o Nombre de la Tienda */}
-//           <div className="text-xl font-semibold">
-//             <Link href="/" className="hover:text-gray-300">
-//               MiTienda
-//             </Link>
-//           </div>
-
-//           {/* Enlaces de Navegación */}
-//           <div className="flex items-center space-x-4">
-//             <Link href="/" className="hover:text-gray-300">
-//               Inicio
-//             </Link>
-//             {/* Mostramos enlaces condicionales basados en si el usuario está logueado */}
-//             {user ? (
-//               <>
-//                 {/* Si el usuario es admin, muestra el enlace al Dashboard */}
-//                 {user.role === "admin" && (
-//                   <Link href="/admin/dashboard" className="hover:text-gray-300">
-//                     Dashboard
-//                   </Link>
-//                 )}
-//                 <span className="font-medium">Hola, {user.name}</span>
-//                 <button
-//                   onClick={logout}
-//                   className="bg-red-500 hover:bg-red-600 px-3 py-1 rounded-md text-sm font-medium"
-//                 >
-//                   Cerrar Sesión
-//                 </button>
-//               </>
-//             ) : (
-//               <>
-//                 {/* Si no hay usuario, muestra enlaces de Login y Registro */}
-//                 <Link href="/login" className="hover:text-gray-300">
-//                   Iniciar Sesión
-//                 </Link>
-//                 <Link href="/register" className="hover:text-gray-300">
-//                   Registrarse
-//                 </Link>
-//               </>
-//             )}
-//           </div>
-//         </div>
-//       </div>
-//     </nav>
-//   );
-// }
-
 // frontend/components/layout/Navbar.tsx
 "use client";
 
@@ -67,9 +6,6 @@ import { useAuthStore } from "@/store/authStore";
 import { Menu, Transition } from "@headlessui/react"; // Importamos Menu y Transition
 import { Fragment } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid"; // Un icono de flecha
-
-// Necesitamos instalar heroicons: npm install @heroicons/react
-// ¡Asegúrate de ejecutar 'npm install @heroicons/react' en la terminal del frontend!
 
 export default function Navbar() {
   const { user, logout } = useAuthStore();

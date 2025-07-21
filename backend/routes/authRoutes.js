@@ -3,7 +3,6 @@
 const express = require("express");
 const router = express.Router();
 
-// Esta es la línea de importación.
 const {
   registerUser,
   loginUser,
@@ -12,7 +11,7 @@ const {
 
 const { protect } = require("../middleware/authMiddleware");
 
-router.post("/register", registerUser); // <-- Posiblemente la línea 10
+router.post("/register", registerUser);
 router.post("/login", loginUser);
 router.get("/me", protect, getMe);
 

@@ -19,15 +19,9 @@ export default function MainLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // 1. Añadimos la clase bg-gray-100 para establecer el color de fondo
-    //    general de todas las páginas que usen este layout.
     <div className="flex flex-col min-h-screen bg-gray-100">
       <Navbar />
-
-      {/* 2. El <main> ahora solo se ocupa de crecer y dejar que cada página 
-             maneje su propio padding y contenedores. */}
       <main className="flex-grow">{children}</main>
-
       {/* Aquí podríamos añadir un Footer más tarde */}
     </div>
   );
