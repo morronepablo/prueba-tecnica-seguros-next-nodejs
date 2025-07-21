@@ -16,6 +16,7 @@ app.use(cors());
 app.get("/", (req, res) => res.send("API Corriendo..."));
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/products", require("./routes/productRoutes"));
+app.use("/api/stats", require("./routes/statsRoutes"));
 
 // --- INICIAR SERVIDOR ---
 const PORT = process.env.PORT || 5000;
