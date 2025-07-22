@@ -5,6 +5,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Añadimos la configuración para permitir imágenes de Cloudinary
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",

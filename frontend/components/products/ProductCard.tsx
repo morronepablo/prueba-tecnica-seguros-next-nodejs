@@ -17,6 +17,7 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
+   console.log('Datos recibidos por ProductCard:', product);
   return (
     <div className="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm hover:shadow-lg transition-shadow duration-300">
       <div className="aspect-h-1 aspect-w-1 bg-gray-200 sm:aspect-none group-hover:opacity-75 h-60">

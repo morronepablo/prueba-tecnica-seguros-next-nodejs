@@ -11,7 +11,10 @@ interface Product {
   name: string;
   price: number;
   category: string;
-  image: { url: string };
+  image: {
+    url: string;
+    public_id: string;
+  };
 }
 
 export default function HomePage() {
